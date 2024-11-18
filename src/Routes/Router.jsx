@@ -4,6 +4,7 @@ import Root from '../Root/Root';
 import Home from '../Pages/Home';
 import Country from '../components/Country';
 import ScrollToTop from '../components/ScrollToTop';
+import SingleUni from '../components/SingleUni';
 
 const Router = createBrowserRouter([
     {
@@ -22,6 +23,12 @@ const Router = createBrowserRouter([
                 path: '/country/:countryId',
                 element: <Country></Country>,
                 loader: ()=>fetch(`../universities.json`)
+            },
+            {
+                path: 'university/:universityId',
+                element: <SingleUni></SingleUni>,
+                loader: ()=>fetch(`../universities.json`)
+
             }
         ]
     }
