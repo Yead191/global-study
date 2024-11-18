@@ -1,0 +1,356 @@
+[
+    {
+        "countryId": "AU",
+        "countryName": "AUSTRALIA",
+        "countryImg": "https://i.ibb.co.com/2vRDtB6/australia.jpg",
+        "whyStudy": "Studying in Australia offers a wealth of opportunities for international students. With its world-class education system, diverse range of courses, and welcoming environment, Australia has become a popular choice for those seeking quality education and a vibrant student experience. Australian universities are renowned for their academic excellence, research-driven environment, and strong industry connections, providing students with practical skills and knowledge that are highly valued in the global job market. Additionally, Australia’s multicultural society promotes cultural exchange and understanding, creating a rich and inclusive learning environment. Students can also enjoy the country’s stunning natural landscapes, thriving cities, and a high standard of living. With comprehensive support services for international students and post-study work opportunities, studying in Australia opens doors to a bright future and exciting career prospects.",
+        "universities": [
+            {
+                "universityId": "AU-001",
+                "universityName": "University of Melbourne",
+                "universityImage": "https://i.ibb.co.com/fdPv0sf/images-q-tbn-ANd9-Gc-RM-m-Ta5q5-Krv5q-Uk7u3s-Je-Ykm9-OBIn-Lv-PUw-s.jpg",
+                "description": "The University of Melbourne, founded in 1853, is one of Australia's most prestigious institutions. Known for its world-class research and exceptional teaching, it offers diverse programs across arts, sciences, and professional disciplines. Its multicultural campus is located in the heart of Melbourne, providing students with a rich academic and cultural experience.",
+                "applyDate": "2024-12-10",
+                "rating": 4.8,
+                "additionalInfo": {
+                    "location": "Melbourne, Victoria",
+                    "programs": [
+                        "Business",
+                        "Medicine",
+                        "Arts"
+                    ],
+                    "tuitionFees": "AUD 45,000 per year"
+                }
+            },
+            {
+                "universityId": "AU-002",
+                "universityName": "Australian National University (ANU)",
+                "universityImage": "https://i.ibb.co.com/xmt2D3t/images-q-tbn-ANd9-Gc-Raf-NV07vnm-Ul-Kp-Js2ji-Viwd-ZIT0dj-C2nr-Caw-s.jpg",
+                "description": "The Australian National University, located in Canberra, is globally recognized for its excellence in research and education. Established in 1946, ANU has consistently ranked among the world's top universities, excelling in areas like social sciences, politics, and international relations. Its serene campus and rigorous academic programs make it a standout choice for students.",
+                "applyDate": "2024-12-20",
+                "rating": 4.7,
+                "additionalInfo": {
+                    "location": "Canberra, Australian Capital Territory",
+                    "programs": [
+                        "Politics",
+                        "Social Sciences",
+                        "Physics"
+                    ],
+                    "tuitionFees": "AUD 42,000 per year"
+                }
+            },
+            {
+                "universityId": "AU-003",
+                "universityName": "University of Sydney",
+                "universityImage": "https://i.ibb.co.com/Gn3Lx3N/images-q-tbn-ANd9-Gc-RQXa-F7-Zpq-Uax-Ap-FAVgjl-Tv-Ph-Fe-WLp6-M75gw-s.jpg",
+                "description": "Founded in 1850, the University of Sydney is Australia's first university and is renowned for its stunning campus and strong emphasis on research. It offers over 400 areas of study, encouraging innovation and critical thinking. The university is a leader in the arts, health sciences, and technology, attracting students worldwide.",
+                "applyDate": "2025-01-15",
+                "rating": 4.8,
+                "additionalInfo": {
+                    "location": "Sydney, New South Wales",
+                    "programs": [
+                        "Health Sciences",
+                        "Engineering",
+                        "Arts"
+                    ],
+                    "tuitionFees": "AUD 46,000 per year"
+                }
+            }
+        ]
+    },
+    {
+        "countryId": "DE",
+        "countryName": "GERMANY",
+        "countryImg": "https://i.ibb.co.com/4FJgvcP/germany.jpg",
+        "whyStudy": "Studying in Germany provides a world-class education with a strong focus on research and innovation, making it an ideal destination for international students. Renowned for its academic excellence, German universities offer a diverse range of programs across fields like engineering, business, and sciences, often tuition-free for both domestic and international students. The country’s robust economy and thriving industries provide excellent post-study work and internship opportunities, enhancing career prospects. Beyond academics, Germany offers a rich cultural experience, blending historic traditions with modern influences, and vibrant city life in places like Berlin and Munich.",
+        "universities": [
+            {
+                "universityId": "DE-001",
+                "universityName": "Technical University of Munich (TUM)",
+                "universityImage": "https://i.ibb.co.com/dBkRq5x/garching-bavaria-germany-april-11-2024-building-of-the-technical-university-of-munich-in-garching-tu.jpg",
+                "description": "The Technical University of Munich, founded in 1868, is a leading research university in Germany. TUM excels in engineering, natural sciences, and technology, offering state-of-the-art facilities and strong industry collaborations. Its innovative programs and emphasis on real-world applications attract a diverse student body.",
+                "applyDate": "2024-12-01",
+                "rating": 4.9,
+                "additionalInfo": {
+                    "location": "Munich, Bavaria",
+                    "programs": [
+                        "Engineering",
+                        "Computer Science",
+                        "Architecture"
+                    ],
+                    "tuitionFees": "No tuition fees (administrative fees: €150 per semester)"
+                }
+            },
+            {
+                "universityId": "DE-002",
+                "universityName": "Ludwig Maximilian University of Munich (LMU)",
+                "universityImage": "https://i.ibb.co.com/F5ptrF8/college-690-14-16-11-cov.jpg",
+                "description": "Ludwig Maximilian University of Munich, established in 1472, is one of Europe's premier academic and research institutions. With a history of excellence, LMU offers programs across a broad spectrum of disciplines. The university emphasizes interdisciplinary learning, global collaborations, and fostering intellectual curiosity.",
+                "applyDate": "2025-01-10",
+                "rating": 4.8,
+                "additionalInfo": {
+                    "location": "Munich, Bavaria",
+                    "programs": [
+                        "Humanities",
+                        "Economics",
+                        "Medicine"
+                    ],
+                    "tuitionFees": "No tuition fees (administrative fees: €150 per semester)"
+                }
+            },
+            {
+                "universityId": "DE-003",
+                "universityName": "Heidelberg University",
+                "universityImage": "https://i.ibb.co.com/LgX6XJ3/images-q-tbn-ANd9-Gc-TFu-MJe-Rat-Di-Tu-C5-BVi-S20j-Mg-IKOon-LXSd-FNA-s.jpg",
+                "description": "Heidelberg University, founded in 1386, is Germany's oldest university and a hub for academic excellence. Known for its strong focus on research, it offers programs in natural sciences, humanities, and social sciences. Its picturesque campus and innovative approach make it a top choice for students worldwide.",
+                "applyDate": "2024-12-15",
+                "rating": 4.7,
+                "additionalInfo": {
+                    "location": "Heidelberg, Baden-Württemberg",
+                    "programs": [
+                        "Medicine",
+                        "Physics",
+                        "Philosophy"
+                    ],
+                    "tuitionFees": "No tuition fees (administrative fees: €170 per semester)"
+                }
+            }
+        ]
+    },
+    {
+        "countryId": "AT",
+        "countryName": "AUSTRIA",
+        "countryImg": "https://i.ibb.co.com/JFQ1zMS/austria.jpg",
+        "whyStudy": "Austria is a perfect blend of academic excellence and cultural richness. Known for its affordable and high-quality education system, Austria is home to some of Europe’s best universities that specialize in engineering, arts, music, and social sciences. The country offers numerous scholarships and support for international students, making it accessible for learners worldwide. Beyond academics, Austria provides a safe and welcoming environment, with cities like Vienna consistently ranked as having the highest quality of life globally. Its central location in Europe allows students to travel and experience neighboring countries while studying. The picturesque landscapes, historical landmarks, and vibrant arts scene make Austria an inspiring destination for students seeking a holistic educational experience.",
+        "universities": [
+            {
+                "universityId": "AT-001",
+                "universityName": "University of Vienna",
+                "universityImage": "https://i.ibb.co.com/Trd0bQj/images-q-tbn-ANd9-Gc-Sap-CQ99sdt-Gnd-P6l-XKI0j-DB3-Sv-NYx1-Xm-IRXw-s.jpg",
+                "description": "The University of Vienna, established in 1365, is one of the oldest and largest universities in Europe. Known for its vibrant academic community, it offers a wide range of programs in humanities, social sciences, and natural sciences. Its historic campus in the heart of Vienna is a blend of tradition and innovation.",
+                "applyDate": "2024-12-30",
+                "rating": 4.8,
+                "additionalInfo": {
+                    "location": "Vienna, Austria",
+                    "programs": [
+                        "Philosophy",
+                        "Law",
+                        "Natural Sciences"
+                    ],
+                    "tuitionFees": "€726 per semester (waived for EU/EEA students)"
+                }
+            },
+            {
+                "universityId": "AT-002",
+                "universityName": "Vienna University of Technology (TU Wien)",
+                "universityImage": "https://i.ibb.co.com/nMnx9XR/800px-Technische-Universit-t-Wien-mainbuilding-mainentrance-northview.jpg",
+                "description": "TU Wien, founded in 1815, is a leading institution for technology and innovation in Austria. It is highly regarded for its engineering and natural sciences programs. TU Wien emphasizes practical applications of knowledge and strong ties with industries, offering a dynamic learning environment.",
+                "applyDate": "2024-11-30",
+                "rating": 4.7,
+                "additionalInfo": {
+                    "location": "Vienna, Austria",
+                    "programs": [
+                        "Engineering",
+                        "Computer Science",
+                        "Mathematics"
+                    ],
+                    "tuitionFees": "€726 per semester (waived for EU/EEA students)"
+                }
+            },
+            {
+                "universityId": "AT-003",
+                "universityName": "University of Innsbruck",
+                "universityImage": "https://i.ibb.co.com/yqZnFZv/images-q-tbn-ANd9-Gc-QONpd-TFPCkfuab-NVPo-You2q0i-Mj-Wvw-Ke0-Meg-s.jpg",
+                "description": "Located amidst the Austrian Alps, the University of Innsbruck was founded in 1669 and is renowned for its research in physics, social sciences, and environmental studies. The university offers a unique blend of academic rigor and breathtaking natural surroundings, fostering both intellectual and personal growth.",
+                "applyDate": "2025-01-05",
+                "rating": 4.6,
+                "additionalInfo": {
+                    "location": "Innsbruck, Austria",
+                    "programs": [
+                        "Physics",
+                        "Environmental Studies",
+                        "Psychology"
+                    ],
+                    "tuitionFees": "€726 per semester (waived for EU/EEA students)"
+                }
+            }
+        ]
+    },
+    {
+        "countryId": "US",
+        "countryName": "UNITED STATES",
+        "countryImg": "https://i.ibb.co.com/880hnxw/usa2.jpg",
+        "whyStudy": "The United States is a global leader in education, offering a wide variety of programs across disciplines at some of the world’s most prestigious universities. With access to state-of-the-art facilities, innovative research opportunities, and highly qualified faculty, students are prepared for a dynamic and competitive job market. The cultural diversity in the USA enriches the learning experience, promoting cross-cultural understanding and networking opportunities with peers from around the globe. Additionally, the USA is home to numerous internship and employment opportunities, thanks to its thriving economy and strong ties to various industries. From vibrant city campuses to serene college towns, students can find an environment that suits their lifestyle and aspirations.",
+        "universities": [
+            {
+                "universityId": "US-001",
+                "universityName": "Harvard University",
+                "universityImage": "https://i.ibb.co.com/hgDgpV7/college-1090-29-15-00-o-HARVARD-UNIVERSITY-BUILDING-facebook.jpg",
+                "description": "Harvard University, established in 1636, is the oldest higher education institution in the United States. Renowned for its academic excellence, Harvard offers an unparalleled range of programs in law, medicine, business, arts, and sciences. Its alumni include eight U.S. presidents, numerous Nobel laureates, and leaders across various fields. The university boasts a vibrant campus life and cutting-edge research facilities.",
+                "applyDate": "2024-12-15",
+                "rating": 4.9,
+                "additionalInfo": {
+                    "location": "Cambridge, Massachusetts",
+                    "programs": [
+                        "Law",
+                        "Business",
+                        "Medicine"
+                    ],
+                    "tuitionFees": "$50,000 per year"
+                }
+            },
+            {
+                "universityId": "US-002",
+                "universityName": "Stanford University",
+                "universityImage": "https://i.ibb.co.com/275KNHt/stanford-br.png",
+                "description": "Located in the heart of Silicon Valley, Stanford University is globally recognized for fostering innovation and entrepreneurship. Established in 1885, it has been a hub for technological advancements, with many of its alumni founding world-changing companies like Google, Netflix, and LinkedIn. Stanford combines rigorous academics with a focus on practical applications, offering exceptional programs in engineering, business, and sciences.",
+                "applyDate": "2024-12-01",
+                "rating": 4.8,
+                "additionalInfo": {
+                    "location": "Stanford, California",
+                    "programs": [
+                        "Engineering",
+                        "Business",
+                        "Computer Science"
+                    ],
+                    "tuitionFees": "$55,000 per year"
+                }
+            },
+            {
+                "universityId": "US-003",
+                "universityName": "Massachusetts Institute of Technology (MIT)",
+                "universityImage": "https://i.ibb.co.com/P5X2sLG/images-q-tbn-ANd9-Gc-QPJTx-C5-JZQZa-VVg-T1swoi-YUi-WNcowk8qw-H5-Q-s.jpg",
+                "description": "MIT is synonymous with groundbreaking research and innovation. Since its founding in 1861, it has been at the forefront of scientific and technological advancements, offering unparalleled programs in engineering, computer science, and physics. With a culture that encourages experimentation and collaboration, MIT is a leader in tackling global challenges such as climate change and artificial intelligence.",
+                "applyDate": "2024-12-10",
+                "rating": 4.9,
+                "additionalInfo": {
+                    "location": "Cambridge, Massachusetts",
+                    "programs": [
+                        "Engineering",
+                        "Physics",
+                        "AI Research"
+                    ],
+                    "tuitionFees": "$53,000 per year"
+                }
+            }
+        ]
+    },
+    {
+        "countryId": "UK",
+        "countryName": "UNITED KIGDOM",
+        "countryImg": "https://i.ibb.co.com/JBJhbFK/uk.jpg",
+        "whyStudy": "The United Kingdom is a globally recognized destination for international students seeking a world-class education. Renowned for its prestigious universities, rich cultural heritage, and diverse academic opportunities, studying in the United Kingdom opens doors to a bright future. From historic institutions like Oxford and Cambridge to modern and innovative universities, the UK offers a wide range of academic programs across various disciplines. Students can immerse themselves in a vibrant learning environment, access cutting-edge research facilities, and benefit from the expertise of renowned professors. Alongside academic excellence, the UK provides a multicultural society, allowing students to experience a blend of cultures, traditions, and perspectives. With its global reputation for quality education, studying in the United Kingdom offers students an enriching and transformative experience that prepares them for successful careers and lifelong connections.",
+        "universities": [
+            {
+                "universityId": "UK-001",
+                "universityName": "University of Oxford",
+                "universityImage": "https://i.ibb.co.com/TLPRZNY/360-F-300777542-tj-LORGr-PCEPk-Rmia-MFNa-Gz4s-Tg-Ewd-Ej-M.jpg",
+                "description": "The University of Oxford, founded in 1096, is the oldest university in the English-speaking world. Known for its rich history and academic excellence, Oxford offers programs across all major disciplines. Its tutorial-based learning system ensures personalized education. The university has produced numerous global leaders, scientists, and scholars, making it a beacon of knowledge and tradition.",
+                "applyDate": "2025-01-10",
+                "rating": 4.9,
+                "additionalInfo": {
+                    "location": "Oxford, England",
+                    "programs": [
+                        "Philosophy",
+                        "Politics",
+                        "Medicine"
+                    ],
+                    "tuitionFees": "£37,000 per year"
+                }
+            },
+            {
+                "universityId": "UK-002",
+                "universityName": "University of Cambridge",
+                "universityImage": "https://i.ibb.co.com/DVwvW3f/Banner-Image-The-University-of-Cambridge.webp",
+                "description": "Established in 1209, the University of Cambridge is globally recognized for its academic rigor and cutting-edge research. It has contributed immensely to the fields of science, literature, and arts, with alumni including Isaac Newton, Stephen Hawking, and Charles Darwin. Cambridge fosters innovation and intellectual growth within its vibrant collegiate system.",
+                "applyDate": "2025-01-15",
+                "rating": 4.8,
+                "additionalInfo": {
+                    "location": "Cambridge, England",
+                    "programs": [
+                        "Law",
+                        "Mathematics",
+                        "Science"
+                    ],
+                    "tuitionFees": "£35,000 per year"
+                }
+            },
+            {
+                "universityId": "UK-003",
+                "universityName": "Imperial College London",
+                "universityImage": "https://i.ibb.co.com/nRsNW6x/800px-Imperial-College-Royal-School-of-Mines.jpg",
+                "description": "Imperial College London, established in 1907, is a world-class university specializing in science, engineering, and business. Located in the heart of London, it is known for its dynamic research culture and global collaborations. Imperial consistently ranks among the top universities worldwide for producing innovative solutions to real-world problems.",
+                "applyDate": "2024-12-20",
+                "rating": 4.7,
+                "additionalInfo": {
+                    "location": "London, England",
+                    "programs": [
+                        "Engineering",
+                        "Medicine",
+                        "Business"
+                    ],
+                    "tuitionFees": "£39,000 per year"
+                }
+            }
+        ]
+    },
+    {
+        "countryId": "CA",
+        "countryName": "CANADA",
+        "countryImg": "https://i.ibb.co.com/718hF5L/canada.jpg",
+        "whyStudy": "Canada is a popular destination for international students seeking a high-quality education and a welcoming multicultural environment. Renowned for its excellent universities and colleges, Canada offers a diverse range of academic programs across various fields of study. With a strong emphasis on research and innovation, students have access to state-of-the-art facilities and world-class faculty members who are leaders in their respective fields. In addition to academic excellence, studying in Canada provides an opportunity to experience its natural beauty, vibrant cities, and rich cultural heritage. The country’s inclusive and safe environment ensures that students from all backgrounds feel welcomed and supported.",
+        "universities": [
+            {
+                "universityId": "CA-001",
+                "universityName": "University of Toronto",
+                "universityImage": "https://i.ibb.co.com/z7ZNQxS/Uof-T-cmh2315fl.jpg",
+                "description": "Established in 1827, the University of Toronto is Canada's top-ranked university, offering a wide range of undergraduate and graduate programs. Known for its focus on research, UofT has contributed to major scientific breakthroughs, including the development of insulin. The campus's diverse community and global outlook make it a hub for innovation and cultural exchange.",
+                "applyDate": "2024-11-30",
+                "rating": 4.7,
+                "additionalInfo": {
+                    "location": "Toronto, Ontario",
+                    "programs": [
+                        "Engineering",
+                        "Medicine",
+                        "Arts"
+                    ],
+                    "tuitionFees": "CAD 45,000 per year"
+                }
+            },
+            {
+                "universityId": "CA-002",
+                "universityName": "University of British Columbia",
+                "universityImage": "https://i.ibb.co.com/RzT1Xf9/irving-k-barber-learning.jpg",
+                "description": "The University of British Columbia, founded in 1908, is renowned for its picturesque campuses and commitment to sustainability. UBC is a global leader in fields such as environmental science, forestry, and social policy. The university offers a vibrant academic experience combined with cutting-edge research opportunities.",
+                "applyDate": "2024-12-15",
+                "rating": 4.6,
+                "additionalInfo": {
+                    "location": "Vancouver, British Columbia",
+                    "programs": [
+                        "Forestry",
+                        "Computer Science",
+                        "Environmental Studies"
+                    ],
+                    "tuitionFees": "CAD 42,000 per year"
+                }
+            },
+            {
+                "universityId": "CA-003",
+                "universityName": "McGill University",
+                "universityImage": "https://i.ibb.co.com/bQbfw0W/redpath-final-rev.jpg",
+                "description": "McGill University, located in Montreal, Quebec, is one of Canada's most prestigious universities. Known for its strong focus on research and academic excellence, McGill is home to diverse student and faculty communities. The university has played a significant role in medical advancements and boasts a dynamic campus life.",
+                "applyDate": "2025-01-05",
+                "rating": 4.8,
+                "additionalInfo": {
+                    "location": "Montreal, Quebec",
+                    "programs": [
+                        "Law",
+                        "Medicine",
+                        "Arts"
+                    ],
+                    "tuitionFees": "CAD 40,000 per year"
+                }
+            }
+        ]
+    }
+]
