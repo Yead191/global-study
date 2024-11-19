@@ -1,6 +1,8 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 // import logo from '../assets/logo.jpg'
+import { PiSignIn } from "react-icons/pi";
+
 
 const Navbar = () => {
     const links = <div className='lg:flex lg:gap-3 '>
@@ -32,7 +34,7 @@ const Navbar = () => {
                         {links}
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">Global Study</a>
+                <Link to='/' className="btn btn-ghost text-xl">Global Study</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -51,7 +53,7 @@ const Navbar = () => {
                     </div>
 
                 </div>
-                <a className="btn bg-base-100">Login</a>
+                <Link to='/login' className="btn bg-base-100 "><PiSignIn className='text-lg' /> Login</Link>
             </div>
         </div>
     );

@@ -6,6 +6,9 @@ import Country from '../components/Country';
 import ScrollToTop from '../components/ScrollToTop';
 import SingleUni from '../components/SingleUni';
 
+import Login from '../Pages/Login';
+import Register from '../Pages/Register';
+
 const Router = createBrowserRouter([
     {
         path: '/',
@@ -29,6 +32,16 @@ const Router = createBrowserRouter([
                 element: <SingleUni></SingleUni>,
                 loader: ()=>fetch(`../universities.json`)
 
+            },
+            {
+                path: '/login',
+                element: <Login></Login>,
+                
+            },
+            {
+                path: '/register',
+                element: <Register></Register>,
+                
             }
         ]
     }

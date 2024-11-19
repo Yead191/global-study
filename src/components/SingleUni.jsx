@@ -37,10 +37,10 @@ const SingleUni = ({ university }) => {
     const handleCommentSubmit = (e) => {
         e.preventDefault();
         if (comment.trim()) {
-            setComments([...comments, comment]); // Add new comment to the list
-            setComment(""); // Clear the input field
+            setComments([...comments, comment])
+            setComment("")
         }
-    };
+    }
 
 
     console.log(uni);
@@ -50,7 +50,7 @@ const SingleUni = ({ university }) => {
                 <h1 className='text-center text-white  text-4xl font-semibold flex items-center justify-center'>{universityName}</h1>
 
             </div>
-            <div className='grid grid-cols-1 md:grid-cols-2 w-11/12 mx-auto my-6  shadow-xl rounded-r-xl relative'>
+            <div className='grid grid-cols-1 md:grid-cols-2 w-11/12 mx-auto my-6  shadow-xl rounded-r-xl relative '>
 
                 <button
                     className='p-2 bg-red-400 rounded-2xl text-white absolute -top-3 -left-3 z-10 transition hover:scale-125'
@@ -59,7 +59,7 @@ const SingleUni = ({ university }) => {
                     <RxCross1 />
                 </button>
 
-                <div className='bg-[#D8DAD9] px-5 py-7 flex flex-col'>
+                <div className='bg-base-200 px-5 py-7 flex flex-col'>
                     <div className=" flex items-center">
                         <h1 className="text-4xl font-bold">Program Details</h1>
                         <div className="flex-grow border-t-2 border-black ml-4"></div>
@@ -172,10 +172,10 @@ const SingleUni = ({ university }) => {
 
             </div>
             {/* comment */}
-            <div className='w-11/12 mx-auto my-6 p-4 border-t-2 border-gray-300'>
-                <h2 className='text-2xl font-semibold mb-4'>Comments</h2>
+            <div className='w-4/12 mx-auto my-6 p-4 '>
+                <h2 className='text-2xl font-semibold mb-4'>Give a Feedback Here</h2>
 
-                {/* Comment Form */}
+
                 <form onSubmit={handleCommentSubmit} className='flex flex-col md:flex-row gap-4'>
                     <input
                         type='text'
