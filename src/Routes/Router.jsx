@@ -8,6 +8,8 @@ import SingleUni from '../components/SingleUni';
 
 import Login from '../Pages/Login';
 import Register from '../Pages/Register';
+import About from '../Pages/About';
+import PrivateRoutes from './PrivateRoutes';
 
 const Router = createBrowserRouter([
     {
@@ -29,7 +31,7 @@ const Router = createBrowserRouter([
             },
             {
                 path: 'university/:universityId',
-                element: <SingleUni></SingleUni>,
+                element: <PrivateRoutes> <SingleUni></SingleUni> </PrivateRoutes>,
                 loader: ()=>fetch(`../universities.json`)
 
             },
@@ -42,7 +44,12 @@ const Router = createBrowserRouter([
                 path: '/register',
                 element: <Register></Register>,
                 
-            }
+            },
+            {
+                path: '/about',
+                element: <About></About>,
+                
+            },
         ]
     }
 ])

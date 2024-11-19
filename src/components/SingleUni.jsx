@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
 import { IoCalendarNumberOutline, IoMailOpenSharp } from "react-icons/io5";
 import { TbWorld } from 'react-icons/tb';
@@ -9,9 +9,11 @@ import { GiGraduateCap } from 'react-icons/gi';
 import { GoDotFill } from 'react-icons/go';
 import { FaMapLocation } from 'react-icons/fa6';
 import { RxCross1 } from 'react-icons/rx';
+import { AuthContext } from '../provider/AuthProvider';
 
 
 const SingleUni = ({ university }) => {
+    const { user } = useContext(AuthContext)
     const { universityId } = useParams()
     const data = useLoaderData()
     const [comment, setComment] = useState("")
@@ -32,7 +34,7 @@ const SingleUni = ({ university }) => {
     if (!uni) {
         return <div className="flex min-h-screen justify-center items-center"><span className="loading loading-bars loading-lg"></span></div>
     }
-    const { universityName, universityImage, description, applyDate, rating, additionalInfo, tuitionFees } = uni
+    const { universityName, universityImage, description, applyDate, rating, additionalInfo } = uni
 
     const handleCommentSubmit = (e) => {
         e.preventDefault();
@@ -43,7 +45,7 @@ const SingleUni = ({ university }) => {
     }
 
 
-    console.log(uni);
+    // console.log(uni);
     return (
         <div className='mt-16'>
             <div className='bg-[#586e86] h-[120px] flex items-center justify-center '>
@@ -53,7 +55,7 @@ const SingleUni = ({ university }) => {
             <div className='grid grid-cols-1 md:grid-cols-2 w-11/12 mx-auto my-6  shadow-xl rounded-r-xl relative '>
 
                 <button
-                    className='p-2 bg-red-400 rounded-2xl text-white absolute -top-3 -left-3 z-10 transition hover:scale-125'
+                    className='p-2 bg-red-500 rounded-2xl text-white absolute -top-3 -left-3 z-10 transition hover:scale-125'
                     onClick={() => window.history.back()}
                 >
                     <RxCross1 />
@@ -131,7 +133,7 @@ const SingleUni = ({ university }) => {
                                 <p className='font-semibold text-gray-600'>PROGRAMS</p>
                                 <div className='flex flex-col space-y-1'>
                                     {
-                                        additionalInfo.programs?.map(info => <p className='text-sm inline-flex items-center' > <GoDotFill />
+                                        additionalInfo.programs?.map((info, index) => <p key={index} className='text-sm inline-flex items-center' > <GoDotFill />
                                             {info} </p>)
                                     }
                                 </div>
@@ -194,7 +196,18 @@ const SingleUni = ({ university }) => {
                     {comments.length > 0 ? (
                         comments.map((cmt, index) => (
                             <div key={index} className='p-2 bg-gray-100 rounded-md shadow'>
-                                {cmt}
+                                <div className='flex gap-3 items-center'>
+                                    <div>
+                                        <img className='h-10 w-10 rounded-full' src={user?.photoURL} alt="" />
+                                    </div>
+                                    <div>
+                                    <p className='font-semibold'>{user?.displayName}</p>
+                                    <p className=''> {cmt}</p>
+
+                                    </div>
+                                </div>
+
+
                             </div>
                         ))
                     ) : (

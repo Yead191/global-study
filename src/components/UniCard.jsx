@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const UniCard = ({ university }) => {
     const { universityName, rating, universityImage, universityId } = university
-    console.log(university);
+    // console.log(university);
     return (
         <Link university={university} to={`/university/${universityId}`}>
             <div className="card card-compact bg-base-100  shadow-xl transition hover:scale-110">

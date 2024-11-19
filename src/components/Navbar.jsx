@@ -1,10 +1,26 @@
-import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 // import logo from '../assets/logo.jpg'
-import { PiSignIn } from "react-icons/pi";
+import { PiSignIn, PiSignOut } from "react-icons/pi";
+import { AuthContext } from '../provider/AuthProvider';
+import userIcon from '../assets/user.png'
+
 
 
 const Navbar = () => {
+    const navigate = useNavigate()
+    const { user, logOut } = useContext(AuthContext)
+    const handleSignOut = () => {
+        logOut()
+            .then(() => {
+                console.log('sign out successfull');
+                navigate('/login')
+            }).catch((error) => {
+                console.log(error.message);
+            });
+    }
+
+
     const links = <div className='lg:flex lg:gap-3 '>
         <li><NavLink to='/' >Home</NavLink></li>
         <li><NavLink to='/about' >About</NavLink></li>
@@ -46,14 +62,40 @@ const Navbar = () => {
                 <div className="dropdown dropdown-end">
                     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                         <div className="w-10 rounded-full">
-                            <img
-                                alt="Tailwind CSS Navbar component"
-                                src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                            {
+                                user && user?.email ?
+                                    <img className='w-10 h-10 object-cover overflow-hidden' src={user.photoURL} alt="" />
+                                    :
+
+                                    <img className='object-cover'
+                                        alt="Tailwind CSS Navbar component"
+                                        src={userIcon} />
+                            }
+
+
                         </div>
                     </div>
+                    <ul
+                        tabIndex={0}
+                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                        <li className='pl-3 pt-1 font-semibold text-lg'>{user?.displayName}</li>
+
+                        <li>
+                            <a className="justify-between"> Profile </a>
+                        </li>
+                        <li><a>Settings</a></li>
+                        
+                    </ul>
 
                 </div>
-                <Link to='/login' className="btn bg-base-100 "><PiSignIn className='text-lg' /> Login</Link>
+                {
+
+                    user && user?.email ?
+                        <button onClick={() => handleSignOut()} className="btn bg-base-100 "> Sign Out <PiSignOut className='text-lg' /></button>
+                        :
+                        <Link to='/login' className="btn bg-base-100 "><PiSignIn className='text-lg' /> Login</Link>
+                }
+
             </div>
         </div>
     );

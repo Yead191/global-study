@@ -1,7 +1,50 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../provider/AuthProvider';
 
 const Register = () => {
+    const location = useLocation()
+    const navigate = useNavigate()
+    const {SignUp, updateUser, setUser} = useContext(AuthContext) || {}
+
+    const handleSignUp = e=>{
+        e.preventDefault()
+        const form = new FormData(e.target)
+        const name = form.get("name")
+        const photo = form.get("photo")
+        const email = form.get("email")
+        const password = form.get("password")
+
+        SignUp(email, password)
+        .then((userCredential) => {
+            // Signed up 
+            const user = userCredential.user;
+            setUser(user)
+            updateUser({
+                displayName: name,
+                photoURL: photo
+            })
+            .then(() => {
+                navigate( location?.state ? location.state  :'/')
+
+            })
+            .catch((error)=> console.log(error))
+            console.log(user);
+            // ...
+          })
+          .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            console.log(errorMessage);
+            // ..
+          });
+
+
+        // console.log(name, photo, email, password);
+        
+        
+    }
+
     return (
         <div className="flex items-center justify-center min-h-screen bg-gray-100">
             <div className="flex flex-col lg:flex-row shadow-lg rounded-lg bg-white max-w-4xl w-full">
@@ -33,23 +76,27 @@ const Register = () => {
                             L
                         </button>
                     </div>
-                    <form className='w-full'>
+                    <form onSubmit={handleSignUp} className='w-full'>
                         <input
+                            name='name'
                             type="text"
                             placeholder="Name"
                             className="block w-full mb-4 px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-purple-400"
                         />
                         <input
+                            name='photo'
                             type="text"
                             placeholder="Photo URL"
                             className="block w-full mb-4 px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-purple-400"
                         />
                         <input
+                            name='email'
                             type="email"
                             placeholder="Email"
                             className="block w-full mb-4 px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-purple-400"
                         />
                         <input
+                            name='password'
                             type="password"
                             placeholder="Password"
                             className="block w-full mb-4 px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-purple-400"

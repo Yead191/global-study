@@ -1,9 +1,34 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../provider/AuthProvider';
 
 const Login = () => {
+    const location = useLocation()
+    const {login} = useContext(AuthContext)
+    const navigate = useNavigate()
+
     const handleLogin = e => {
         e.preventDefault()
+
+        const form = new FormData(e.target)
+        const email = form.get('email')
+        const password = form.get('password')
+
+
+        login(email, password)
+        .then((userCredential) => {
+            // Signed in 
+            const user = userCredential.user;
+            navigate( location?.state ? location.state  :'/')
+            // ...
+            console.log(user);
+          })
+          .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            console.log(errorMessage);
+          });
+        
     }
     return (
         <div className="flex items-center justify-center min-h-screen bg-gray-100">
@@ -25,13 +50,15 @@ const Login = () => {
                             L
                         </button>
                     </div>
-                    <form className='w-full'>
+                    <form onSubmit={handleLogin} className='w-full'>
                         <input
+                            name='email'
                             type="email"
                             placeholder="Email"
                             className="block w-full mb-4 px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-purple-400"
                         />
                         <input
+                            name='password'
                             type="password"
                             placeholder="Password"
                             className="block w-full mb-4 px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-purple-400"
