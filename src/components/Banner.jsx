@@ -8,7 +8,7 @@ const Banner = ({ countryName, countryImg }) => {
                 src={countryImg}
                 alt="image loading"
             />
-            <h1 className='absolute inset-0 flex items-center justify-center text-5xl text-white bg-black bg-opacity-50'>
+            <h1 className='absolute inset-0 flex items-center justify-center text-4xl md:text-5xl text-white bg-black bg-opacity-50'>
                 Study in {countryName}
             </h1>
         </div>

@@ -59,7 +59,7 @@ const Country = () => {
                 </div>
 
                 {/* university card */}
-                <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mt-8'>
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8'>
                             {
                                 universities?.map(university => <UniCard university={university} key={university.universityId}></UniCard> )
                             }
@@ -69,6 +69,7 @@ const Country = () => {
 
 
 
+            <button onClick={() => window.history.back()} className='btn btn-secondary my-5'>Go Back</button>
             </section>
 
         </div>

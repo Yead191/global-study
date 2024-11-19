@@ -1,9 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
+import { IoCalendarNumberOutline, IoMailOpenSharp } from "react-icons/io5";
+import { TbWorld } from 'react-icons/tb';
+import { FiClock } from 'react-icons/fi';
+import { PiBuildingApartmentDuotone, PiCurrencyCircleDollarBold } from 'react-icons/pi';
+import { FcRating } from 'react-icons/fc';
+import { GiGraduateCap } from 'react-icons/gi';
+import { GoDotFill } from 'react-icons/go';
+import { FaMapLocation } from 'react-icons/fa6';
+import { RxCross1 } from 'react-icons/rx';
+
 
 const SingleUni = ({ university }) => {
     const { universityId } = useParams()
     const data = useLoaderData()
+    const [comment, setComment] = useState("")
+    const [comments, setComments] = useState([])
+
     const [uni, setUni] = useState(null)
 
     useEffect(() => {
@@ -19,12 +32,178 @@ const SingleUni = ({ university }) => {
     if (!uni) {
         return <div className="flex min-h-screen justify-center items-center"><span className="loading loading-bars loading-lg"></span></div>
     }
-    const {universityName, universityImage, description, applyDate, rating, additionalInfo, tuitionFees } = uni
+    const { universityName, universityImage, description, applyDate, rating, additionalInfo, tuitionFees } = uni
+
+    const handleCommentSubmit = (e) => {
+        e.preventDefault();
+        if (comment.trim()) {
+            setComments([...comments, comment]); // Add new comment to the list
+            setComment(""); // Clear the input field
+        }
+    };
+
+
     console.log(uni);
     return (
-        <div className='mt-28'>
-            <img src={universityImage} alt="" />
-            <h1>{universityName}</h1>
+        <div className='mt-16'>
+            <div className='bg-[#586e86] h-[120px] flex items-center justify-center '>
+                <h1 className='text-center text-white  text-4xl font-semibold flex items-center justify-center'>{universityName}</h1>
+
+            </div>
+            <div className='grid grid-cols-1 md:grid-cols-2 w-11/12 mx-auto my-6  shadow-xl rounded-r-xl relative'>
+
+                <button
+                    className='p-2 bg-red-400 rounded-2xl text-white absolute -top-3 -left-3 z-10 transition hover:scale-125'
+                    onClick={() => window.history.back()}
+                >
+                    <RxCross1 />
+                </button>
+
+                <div className='bg-[#D8DAD9] px-5 py-7 flex flex-col'>
+                    <div className=" flex items-center">
+                        <h1 className="text-4xl font-bold">Program Details</h1>
+                        <div className="flex-grow border-t-2 border-black ml-4"></div>
+                    </div>
+                    <p className='my-5 '><span className='underline text-xl font-semibold'>Description:</span> {description}</p>
+                    <div className='border border-black'></div>
+
+                    <div className='grid grid-cols-2 lg:grid-cols-3 my-6 gap-4 flex-grow'>
+                        <div className=' flex gap-2'>
+                            <IoCalendarNumberOutline className=' text-lg' />
+                            <div>
+                                <p className='font-semibold text-gray-600'>DURATION</p>
+                                <p className='text-sm'>BSc: 4 Years, MSC: 2 Years</p>
+                            </div>
+                        </div>
+
+
+
+                        <div className=' flex gap-2'>
+                            <TbWorld
+                                className=' text-xl' />
+                            <div>
+                                <p className='font-semibold text-gray-600'>LANGUAGES</p>
+                                <p className='text-sm' >English</p>
+                            </div>
+
+                        </div>
+                        <div className=' flex gap-2'>
+                            <FiClock
+
+                                className=' text-xl' />
+                            <div>
+                                <p className='font-semibold text-gray-600'>PACE</p>
+                                <p className='text-sm' >Full time, Part time</p>
+                            </div>
+
+                        </div>
+                        <div className=' flex gap-2'>
+                            <IoMailOpenSharp
+
+
+                                className=' text-xl' />
+                            <div>
+                                <p className='font-semibold text-gray-600'>APPLICATION DEADLINE</p>
+                                <p className='text-sm' >{applyDate}</p>
+                            </div>
+
+                        </div>
+                        <div className=' flex gap-2'>
+                            <PiBuildingApartmentDuotone className=' text-xl' />
+                            <div>
+                                <p className='font-semibold text-gray-600'>STUDY FORMAT</p>
+                                <p className='text-sm' >On Campus</p>
+                            </div>
+
+                        </div>
+                        <div className=' flex gap-2'>
+                            <FcRating className=' text-xl' />
+                            <div>
+                                <p className='font-semibold text-gray-600'>RATING</p>
+                                <p className='' >{rating}</p>
+                            </div>
+
+                        </div>
+
+                        <div className=' flex gap-2'>
+                            <GiGraduateCap className=' text-xl' />
+                            <div>
+                                <p className='font-semibold text-gray-600'>PROGRAMS</p>
+                                <div className='flex flex-col space-y-1'>
+                                    {
+                                        additionalInfo.programs?.map(info => <p className='text-sm inline-flex items-center' > <GoDotFill />
+                                            {info} </p>)
+                                    }
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div className=' flex gap-2'>
+                            <FaMapLocation
+                                className=' text-xl' />
+                            <div>
+                                <p className='font-semibold text-gray-600'>LOCATION</p>
+                                <p className='' >{additionalInfo.location}</p>
+                            </div>
+
+                        </div>
+                        <div className=' flex gap-2'>
+                            <PiCurrencyCircleDollarBold className=' text-xl' />
+                            <div>
+                                <p className='font-semibold text-gray-600'>TUITION FEES</p>
+                                <p className='' >{additionalInfo.tuitionFees}</p>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                    <button className='btn btn-success text-white  w-2/4 mx-auto flex justify-center items-center'>APPLY NOW</button>
+
+                </div>
+
+                <div>
+                    <img className='w-full h-full overflow-hidden object-cover rounded-r-lg' src={universityImage} alt="" />
+                </div>
+
+
+
+            </div>
+            {/* comment */}
+            <div className='w-11/12 mx-auto my-6 p-4 border-t-2 border-gray-300'>
+                <h2 className='text-2xl font-semibold mb-4'>Comments</h2>
+
+                {/* Comment Form */}
+                <form onSubmit={handleCommentSubmit} className='flex flex-col md:flex-row gap-4'>
+                    <input
+                        type='text'
+                        value={comment}
+                        onChange={(e) => setComment(e.target.value)}
+                        className='flex-1 p-2 border border-gray-300 rounded-md'
+                        placeholder='Write a comment...'
+                    />
+                    <button type='submit' className='btn btn-primary px-4 py-2'>
+                        Submit
+                    </button>
+                </form>
+
+                {/* Display Comments */}
+                <div className='mt-6 space-y-4'>
+                    {comments.length > 0 ? (
+                        comments.map((cmt, index) => (
+                            <div key={index} className='p-2 bg-gray-100 rounded-md shadow'>
+                                {cmt}
+                            </div>
+                        ))
+                    ) : (
+                        <p className='text-gray-600'>No comments yet. Be the first to comment!</p>
+                    )}
+                </div>
+            </div>
+
+
         </div>
     );
 };
