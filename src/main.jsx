@@ -10,7 +10,7 @@ import { Toaster } from 'react-hot-toast'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <AuthProvider>
-    <Toaster />
+    <Toaster position="top-center" />
       <RouterProvider router={Router} />
 
     </AuthProvider>

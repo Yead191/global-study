@@ -4,6 +4,7 @@ import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { PiSignIn, PiSignOut } from "react-icons/pi";
 import { AuthContext } from '../provider/AuthProvider';
 import userIcon from '../assets/user.png'
+import toast from 'react-hot-toast';
 
 
 
@@ -13,7 +14,7 @@ const Navbar = () => {
     const handleSignOut = () => {
         logOut()
             .then(() => {
-                console.log('sign out successfull');
+                toast.success('Sign out Successful');
                 navigate('/login')
             }).catch((error) => {
                 console.log(error.message);

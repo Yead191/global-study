@@ -26,6 +26,7 @@ const Login = () => {
             .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
+                toast.error(errorMessage)
                 // ..
             });
     }
@@ -59,14 +60,14 @@ const Login = () => {
                 // Signed in 
                 const user = userCredential.user;
                 navigate(location?.state ? location.state : '/')
-                toast.success(`Successfully logged in as: ${res.user.displayName}`)
+                toast.success(`Successfully logged in as: ${user.displayName}`)
                 // ...
                 console.log(user);
             })
             .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
-                console.log(errorMessage);
+                toast.error(errorMessage);
             });
 
     }
