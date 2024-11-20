@@ -1,6 +1,6 @@
 import React from 'react';
-import HomeBanner from '../components/HomeBanner';
 import { Link, useLoaderData } from 'react-router-dom';
+import HomeBanner2 from '../components/HomeBanner2';
 
 const Home = () => {
     const countries = useLoaderData()
@@ -9,7 +9,7 @@ const Home = () => {
     return (
         <div className='mt-24 mb-6'>
             <header>
-                <HomeBanner></HomeBanner>
+                <HomeBanner2></HomeBanner2>
             </header>
             <section className='my-8'>
                 <h4 className='text-center '>Choose Country</h4>

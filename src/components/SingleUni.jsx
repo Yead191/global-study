@@ -10,9 +10,11 @@ import { GoDotFill } from 'react-icons/go';
 import { FaMapLocation } from 'react-icons/fa6';
 import { RxCross1 } from 'react-icons/rx';
 import { AuthContext } from '../provider/AuthProvider';
+import successLogo from '../assets/Group.png'
 
 
 const SingleUni = ({ university }) => {
+    const [disable , setDisable] = useState(false)
     const { user } = useContext(AuthContext)
     const { universityId } = useParams()
     const data = useLoaderData()
@@ -162,7 +164,7 @@ const SingleUni = ({ university }) => {
 
                     </div>
 
-                    <button className='btn btn-success text-white  w-2/4 mx-auto flex justify-center items-center'>APPLY NOW</button>
+                    <button disabled={disable} onClick={() => document.getElementById('my_modal_5').showModal()} className='btn btn-success text-white  w-2/4 mx-auto flex justify-center items-center'>APPLY NOW</button>
 
                 </div>
 
@@ -173,8 +175,26 @@ const SingleUni = ({ university }) => {
 
 
             </div>
+            {/* modal */}
+            {/* Open the modal using document.getElementById('ID').showModal() method */}
+            <button className="btn hidden" >open modal</button>
+            <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
+                <div className="modal-box place-items-center">
+                    <img src={successLogo} alt="" />
+                    <h3 className="font-bold my-2 text-3xl">Congrats!</h3>
+                    <p className="py-4 text-center">You have successfully applied to <span className='font-semibold text-xl text-purple-500'>{universityName}</span>.</p>
+                    <div className="modal-action">
+                        <form method="dialog">
+                            {/* if there is a button in form, it will close the modal */}
+                            <button onClick={()=> setDisable(true)} className="btn ">Close</button>
+                        </form>
+                    </div>
+                </div>
+            </dialog>
+
+
             {/* comment */}
-            <div className='w-4/12 mx-auto my-6 p-4 '>
+            <div className='lg:w-4/12 mx-auto my-6 p-4 '>
                 <h2 className='text-2xl font-semibold mb-4'>Give a Feedback Here</h2>
 
 
@@ -193,6 +213,8 @@ const SingleUni = ({ university }) => {
 
                 {/* Display Comments */}
                 <div className='mt-6 space-y-4'>
+                <p className='text-gray-600 text-lg font-semibold'>All Comments:</p>
+
                     {comments.length > 0 ? (
                         comments.map((cmt, index) => (
                             <div key={index} className='p-2 bg-gray-100 rounded-md shadow'>
@@ -201,8 +223,8 @@ const SingleUni = ({ university }) => {
                                         <img className='h-10 w-10 rounded-full' src={user?.photoURL} alt="" />
                                     </div>
                                     <div>
-                                    <p className='font-semibold'>{user?.displayName}</p>
-                                    <p className=''> {cmt}</p>
+                                        <p className='font-semibold'>{user?.displayName}</p>
+                                        <p className=''> {cmt}</p>
 
                                     </div>
                                 </div>

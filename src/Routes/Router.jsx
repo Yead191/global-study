@@ -10,6 +10,7 @@ import Login from '../Pages/Login';
 import Register from '../Pages/Register';
 import About from '../Pages/About';
 import PrivateRoutes from './PrivateRoutes';
+import ErrorPage from '../components/ErrorPage';
 
 const Router = createBrowserRouter([
     {
@@ -18,6 +19,7 @@ const Router = createBrowserRouter([
         <ScrollToTop></ScrollToTop>
         <Root></Root>
         </>),
+        errorElement: <ErrorPage></ErrorPage>,
         children:[
             {
                 path: '/',

@@ -63,8 +63,8 @@ const Navbar = () => {
                     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                         <div className="w-10 rounded-full">
                             {
-                                user && user?.email ?
-                                    <img className='w-10 h-10 object-cover overflow-hidden' src={user.photoURL} alt="" />
+                                user  ?
+                                    <img className='w-10 h-10 object-cover overflow-hidden' src={user?.photoURL} alt="img" />
                                     :
 
                                     <img className='object-cover'

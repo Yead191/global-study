@@ -9,7 +9,7 @@ const Root = () => {
             <header className=''>
                 <Navbar></Navbar>
             </header>
-            <main className='flex-grow '>
+            <main className='flex-grow bg-white '>
                 <Outlet></Outlet>
             </main>
             <footer>
