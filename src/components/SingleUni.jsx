@@ -220,7 +220,7 @@ const SingleUni = ({ university }) => {
                             <div key={index} className='p-2 bg-gray-100 rounded-md shadow'>
                                 <div className='flex gap-3 items-center'>
                                     <div>
-                                        <img className='h-10 w-10 rounded-full' src={user?.photoURL} alt="" />
+                                        <img className='h-10 w-10 rounded-full object-cover overflow-hidden' src={user?.photoURL} alt="" />
                                     </div>
                                     <div>
                                         <p className='font-semibold'>{user?.displayName}</p>

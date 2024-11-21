@@ -6,6 +6,8 @@ import usa from '../assets/flag/usa2.jpg'
 import uk from '../assets/flag/uk.jpg'
 import canada from '../assets/flag/canada.jpg'
 import aus from '../assets/flag/australia.jpg'
+import de from '../assets/flag/germany.jpg'
+import at from '../assets/flag/austria.jpg'
 
 // Import Swiper styles
 import 'swiper/css';
@@ -45,6 +47,8 @@ export default function HomeBanner2() {
         <SwiperSlide  style={{backgroundImage:` url(${uk})`, backgroundPosition: 'bottom', height: '100%', backgroundSize: 'cover', fontSize: '4em', color: 'white', fontWeight: 'lighter'}}>UNITED KINGDOM</SwiperSlide>
         <SwiperSlide  style={{backgroundImage:` url(${canada})`, backgroundPosition: 'center', height: '100%', backgroundSize: 'cover', fontSize: '4em', color: 'white', fontWeight: 'lighter'}}>CANADA</SwiperSlide>
         <SwiperSlide  style={{backgroundImage:` url(${aus})`, backgroundPosition: 'center', height: '100%', backgroundSize: 'cover', fontSize: '4em', color: 'white', fontWeight: 'lighter'}}>AUSTRALIA</SwiperSlide>
+        <SwiperSlide  style={{backgroundImage:` url(${de})`, backgroundPosition: 'bottom', height: '100%', backgroundSize: 'cover', fontSize: '4em', color: 'white', fontWeight: 'lighter'}}>GERMANY</SwiperSlide>
+        <SwiperSlide  style={{backgroundImage:` url(${at})`, backgroundPosition: 'center', height: '100%', backgroundSize: 'cover', fontSize: '4em', color: 'white', fontWeight: 'lighter'}}>AUSTRIA</SwiperSlide>
         
         
         <div className="autoplay-progress" slot="container-end">

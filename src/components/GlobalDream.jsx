@@ -4,11 +4,11 @@ import educator from '../assets/educator.jpg'
 
 const GlobalDream = () => {
     return (
-        <section className='md:w-10/12 mx-auto my-8'>
+        <section className='lg:w-10/12 mx-auto my-8'>
                 <div className="space-y-12">
                     {/* Top Section */}
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-6 px-4 md:px-16 ">
-                        <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center text-center transition hover:scale-110">
+                        <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center text-center transition hover:scale-110 ">
                             <FaGlobe className="text-4xl text-purple-600 mb-4" />
                             <h3 className="text-xl font-bold">15+ Destinations</h3>
                             <p className="text-gray-600 mt-2">

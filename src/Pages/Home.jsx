@@ -32,7 +32,7 @@ const Home = () => {
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 my-8 w-10/12 mx-auto '>
                     {
                         countries.map(country =>
-                            <Link to={`country/${country.countryId}`} key={country.countryId} country={country} >
+                            <Link  data-aos="zoom-in-up"  to={`country/${country.countryId}`} key={country.countryId} country={country} >
                                 <div className="card card-compact bg-base-100 shadow-xl transition hover:scale-110">
                                     <figure>
                                         <img className='md:h-[260px] object-cover w-full overflow-hidden'

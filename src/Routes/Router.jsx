@@ -11,6 +11,8 @@ import Register from '../Pages/Register';
 import About from '../Pages/About';
 import PrivateRoutes from './PrivateRoutes';
 import ErrorPage from '../components/ErrorPage';
+import Profile from '../Pages/Profile';
+import ForgetPass from '../components/ForgetPass';
 
 const Router = createBrowserRouter([
     {
@@ -48,10 +50,19 @@ const Router = createBrowserRouter([
                 
             },
             {
+                path: '/forgetPass',
+                element: <ForgetPass></ForgetPass>
+            },
+            {
                 path: '/about',
                 element: <About></About>,
                 
             },
+            {
+                path: '/profile',
+                element: <PrivateRoutes> <Profile></Profile> </PrivateRoutes>
+            },
+
         ]
     }
 ])

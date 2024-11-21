@@ -4,7 +4,7 @@ import { FaDollarSign, FaUserFriends, FaArrowRight, FaRocket } from 'react-icons
 
 const OurFeatures = () => {
     return (
-        <section className="px-6 md:px-16 py-12 md:w-8/12 mx-auto  ">
+        <section className="px-6 md:px-16 py-12 lg::w-8/12 mx-auto  ">
                 <div className="text-center mb-8">
                     <h2 className="text-3xl md:text-5xl font-bold text-gray-800">Our Features</h2>
                     <p className="text-gray-600 mt-2">

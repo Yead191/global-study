@@ -8,27 +8,32 @@ import { FaEye, FaEyeSlash } from 'react-icons/fa6';
 
 const Login = () => {
     const location = useLocation()
-    const { login, signInWithGoogle, setUser, forgetPassword } = useContext(AuthContext)
+    const { login, signInWithGoogle, setUser, forgetPassword , setForgetMail } = useContext(AuthContext)
 
     const navigate = useNavigate()
     const emailRef = useRef()
 
     const [showPass, setShowPass] = useState(false)
+//forget pass
+    // const handleForgetPass = () => {
+    //     const resetEmail = emailRef.current.value
+    //     forgetPassword(resetEmail)
+    //         .then(() => {
+    //             // Password reset email sent!
+    //             // ..
+    //             toast.success('Password reset email sent')
+    //         })
+    //         .catch((error) => {
+    //             const errorCode = error.code;
+    //             const errorMessage = error.message;
+    //             toast.error(errorMessage)
+    //             // ..
+    //         });
+    // }
 
-    const handleForgetPass = () => {
+    const handleForgetPass = ()=>{
         const resetEmail = emailRef.current.value
-        forgetPassword(resetEmail)
-            .then(() => {
-                // Password reset email sent!
-                // ..
-                toast.success('Password reset email sent')
-            })
-            .catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
-                toast.error(errorMessage)
-                // ..
-            });
+        setForgetMail(resetEmail)
     }
 
 
@@ -109,9 +114,9 @@ const Login = () => {
                         </div>
 
                        
-                        <a onClick={handleForgetPass} href="#" className="text-sm text-purple-600 hover:underline mb-4 block">
+                        <Link to='/forgetPass' onClick={handleForgetPass}  href="#" className="text-sm text-purple-600 hover:underline mb-4 block">
                             Forgot Your Password?
-                        </a>
+                        </Link>
 
                         <div className='flex items-center justify-center'>
 

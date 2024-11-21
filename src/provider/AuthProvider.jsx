@@ -34,6 +34,10 @@ const AuthProvider = ({children}) => {
     }
     
     //handle forget password
+    const [forgetMail, setForgetMail ] = useState('')
+
+
+
     const forgetPassword = (resetEmail)=>{
         return sendPasswordResetEmail(auth, resetEmail)
     }
@@ -77,6 +81,9 @@ const AuthProvider = ({children}) => {
         loading,
         signInWithGoogle,
         forgetPassword,
+        setForgetMail,
+        forgetMail,
+        
         
         
 
