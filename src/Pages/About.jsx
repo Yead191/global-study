@@ -89,7 +89,7 @@ const About = () => {
                         <VisibilitySensor partialVisibility offset={{ bottom: 100 }}>
                             {({ isVisible }) => (
                                 <h2 className="text-4xl font-bold text-gray-800">
-                                    {isVisible ? <CountUp start={0} end={12} duration={3} /> : 0}+
+                                    {isVisible ? <CountUp start={0} end={17} duration={3} /> : 0}+
                                 </h2>
                             )}
                         </VisibilitySensor>
