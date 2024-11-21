@@ -52,7 +52,7 @@ const AuthProvider = ({children}) => {
             unSubscribe()
         }
     } ,[])
-    console.log(user);
+    // console.log(user);
 
     //logout
     const logOut = ()=>{
@@ -83,7 +83,7 @@ const AuthProvider = ({children}) => {
         forgetPassword,
         setForgetMail,
         forgetMail,
-        
+
         
         
 

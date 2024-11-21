@@ -29,7 +29,7 @@ const Login = () => {
     const handleLoginWithGoogle = () => {
         signInWithGoogle()
             .then(res => {
-                console.log(res.user)
+                // console.log(res.user)
                 // setUser(res.user)
                 toast.success(`Successfully logged in as: ${res.user.displayName}`)
                 navigate(location?.state ? location.state : '/')
@@ -56,7 +56,7 @@ const Login = () => {
                 navigate(location?.state ? location.state : '/')
                 toast.success(`Successfully logged in as: ${user.displayName}`)
                 // ...
-                console.log(user);
+                // console.log(user);
             })
             .catch((error) => {
                 const errorCode = error.code;
