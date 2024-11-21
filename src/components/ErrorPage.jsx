@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import { Link } from 'react-router-dom';
 
 const ErrorPage = () => {
+    useEffect(()=>{
+        document.title = 'Error | Global Study'
+    },[])
     return (
         <div className='flex flex-col min-h-screen'>
             <header>

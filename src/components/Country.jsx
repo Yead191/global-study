@@ -8,6 +8,10 @@ import UniCard from './UniCard';
 
 
 const Country = () => {
+    useEffect(()=>{
+        document.title = 'Country | Global Study'
+    },[])
+
     const data = useLoaderData()
     const { countryId } = useParams()
     const [uni, setUniversities] = useState([])
@@ -27,7 +31,7 @@ const Country = () => {
         <div className='mt-16 '>
             <Banner countryName={countryName} countryImg={countryImg} ></Banner>
 
-            <section className='my-8 w-10/12 mx-auto'>
+            <section className='my-8 w-11/12 md:w-10/12 mx-auto'>
                 <div className='grid grid-cols-1 lg:grid-cols-12 gap-5'>
                     <div className='md:col-span-9'>
                         <h1 className='text-4xl font-semibold'>Why to study in <span className='text-5xl text-purple-400'>{countryName}</span>?</h1>

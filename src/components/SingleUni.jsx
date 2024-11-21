@@ -14,6 +14,9 @@ import successLogo from '../assets/Group.png'
 
 
 const SingleUni = ({ university }) => {
+    useEffect(()=>{
+        document.title = 'University | Global Study'
+    },[])
     const [disable , setDisable] = useState(false)
     const { user } = useContext(AuthContext)
     const { universityId } = useParams()

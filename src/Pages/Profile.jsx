@@ -1,9 +1,14 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../provider/AuthProvider";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 
 const Profile = () => {
+    useEffect(()=>{
+        document.title = 'Profile | Global Study'
+    },[])
+
+    
     const navigate = useNavigate()
     const { user, updateUser } = useContext(AuthContext)
     const [isEditing, setIsEditing] = useState(false);

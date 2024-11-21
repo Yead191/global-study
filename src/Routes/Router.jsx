@@ -13,6 +13,8 @@ import PrivateRoutes from './PrivateRoutes';
 import ErrorPage from '../components/ErrorPage';
 import Profile from '../Pages/Profile';
 import ForgetPass from '../components/ForgetPass';
+import Admission from '../Pages/Admission';
+import Contact from '../components/Contact';
 
 const Router = createBrowserRouter([
     {
@@ -59,8 +61,17 @@ const Router = createBrowserRouter([
                 
             },
             {
+                path: '/contact',
+                element: <Contact></Contact> ,
+                
+            },
+            {
                 path: '/profile',
                 element: <PrivateRoutes> <Profile></Profile> </PrivateRoutes>
+            },
+            {
+                path: '/admissions',
+                element: <PrivateRoutes> <Admission></Admission> </PrivateRoutes>
             },
 
         ]

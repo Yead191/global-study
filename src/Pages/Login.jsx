@@ -1,4 +1,4 @@
-import React, { useContext, useRef, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../provider/AuthProvider';
 import { FcGoogle } from "react-icons/fc";
@@ -7,6 +7,11 @@ import { FaEye, FaEyeSlash } from 'react-icons/fa6';
 
 
 const Login = () => {
+
+    useEffect(()=>{
+        document.title = 'Login | Global Study'
+    },[])
+
     const location = useLocation()
     const { login, signInWithGoogle, setUser, forgetPassword , setForgetMail } = useContext(AuthContext)
 
@@ -14,22 +19,6 @@ const Login = () => {
     const emailRef = useRef()
 
     const [showPass, setShowPass] = useState(false)
-//forget pass
-    // const handleForgetPass = () => {
-    //     const resetEmail = emailRef.current.value
-    //     forgetPassword(resetEmail)
-    //         .then(() => {
-    //             // Password reset email sent!
-    //             // ..
-    //             toast.success('Password reset email sent')
-    //         })
-    //         .catch((error) => {
-    //             const errorCode = error.code;
-    //             const errorMessage = error.message;
-    //             toast.error(errorMessage)
-    //             // ..
-    //         });
-    // }
 
     const handleForgetPass = ()=>{
         const resetEmail = emailRef.current.value

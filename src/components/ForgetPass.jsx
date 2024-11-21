@@ -1,9 +1,13 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { AuthContext } from '../provider/AuthProvider';
 import toast from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
+import { RxCross1 } from 'react-icons/rx';
 
 const ForgetPass = () => {
+    useEffect(()=>{
+        document.title = 'Forgot | Global Study'
+    },[])
     const { forgetMail, forgetPassword, setForgetMail } = useContext(AuthContext)
     const navigate = useNavigate()
 
@@ -33,7 +37,13 @@ const ForgetPass = () => {
         <div className="flex items-center justify-center min-h-screen bg-gray-100">
             <div className="flex flex-col  shadow-lg rounded-lg bg-white  w-full lg:w-1/4 mx-auto">
 
-                <div className="p-8 flex flex-col justify-center items-center">
+                <div className="p-8 flex flex-col justify-center items-center relative">
+                    <button
+                        className='p-2 bg-red-500 rounded-2xl text-white absolute -top-3 -left-3 z-10 transition hover:scale-125'
+                        onClick={() => window.history.back()}
+                    >
+                        <RxCross1 />
+                    </button>
                     <h2 className="text-3xl font-bold mb-4 text-gray-800"> Forgot Your Password?</h2>
                     <p className='text-gray-500 mb-3'>Reset Your Password from Email</p>
 

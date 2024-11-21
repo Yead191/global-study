@@ -24,6 +24,10 @@ const Navbar = () => {
     const links = <div className='lg:flex lg:gap-3 '>
         <li><NavLink to='/' >Home</NavLink></li>
         <li><NavLink to='/about' >About</NavLink></li>
+        {
+            user && <li><NavLink to='/admissions' >Admissions</NavLink></li>
+        }
+
         <li><NavLink to='/profile' > My Profile</NavLink></li>
     </div >
 
@@ -50,10 +54,14 @@ const Navbar = () => {
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
                         {links}
                         <li>
-                            <a>Parent</a>
+                            <a>Countries</a>
                             <ul className="p-2">
-                                <li><a>Submenu 1</a></li>
-                                <li><a>Submenu 2</a></li>
+                                <li><Link to='/country/US'>USA</Link></li>
+                                <li><Link to='/country/UK'>UK</Link></li>
+                                <li><Link to='/country/CA'>CANADA</Link></li>
+                                <li><Link to='/country/AU'>AUSTRALIA</Link></li>
+                                <li><Link to='/country/DE'>GERMANY</Link></li>
+                                <li><Link to='/country/AT'>AUSTRIA</Link></li>
                             </ul>
                         </li>
                     </ul>

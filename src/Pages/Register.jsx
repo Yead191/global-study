@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../provider/AuthProvider';
 import { FcGoogle } from 'react-icons/fc';
@@ -6,6 +6,10 @@ import toast from 'react-hot-toast';
 import { FaEye, FaEyeSlash } from 'react-icons/fa6';
 
 const Register = () => {
+    useEffect(()=>{
+        document.title = 'Register | Global Study'
+    },[])
+
     const [showPass, setShowPass] = useState(false)
 
     const [errorMsg, setErrorMsg] = useState('')

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import HomeBanner2 from '../components/HomeBanner2';
 
@@ -8,6 +8,9 @@ import GlobalDream from '../components/GlobalDream';
 
 
 const Home = () => {
+    useEffect(()=>{
+        document.title = 'Home | Global Study'
+    },[])
     const countries = useLoaderData()
     // console.log(countries);
 
@@ -19,7 +22,7 @@ const Home = () => {
             <div className='text-center space-y-3 my-8'>
                 <h1 className='text-3xl md:text-5xl text-[#AE2323]'> Transform Your Future With Global Study</h1>
                 <p className='text-lg'>Unlock Your Potential and soar Towards Success</p>
-                <button className='btn bg-[#AE2323] text-white rounded-none px-9'>CONTACT US</button>
+                <Link to={`/contact`} className='btn bg-[#AE2323] text-white rounded-none px-9'>CONTACT US</Link>
 
             </div>
 
@@ -29,7 +32,7 @@ const Home = () => {
                 <h4 className='text-center '>Choose Your Dream Country</h4>
                 <h1 className='text-center text-4xl font-bold'>Top Countries to Study</h1>
 
-                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 my-8 w-10/12 mx-auto '>
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 my-8 w-11/12 md:w-10/12 mx-auto '>
                     {
                         countries.map(country =>
                             <Link  data-aos="zoom-in-up"  to={`country/${country.countryId}`} key={country.countryId} country={country} >
