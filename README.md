@@ -1,5 +1,12 @@
 
 # Global Study
+###
+
+<div align="center">
+  <img height="400" src="https://i.ibb.co.com/hFwfwp7/Screenshot-2025-01-08-at-2-41-51-PM.png"  />
+</div>
+
+###
 
 **Global Study** is a platform dedicated to assisting students in exploring opportunities to study abroad. With detailed information about top universities, countries, and available programs, we aim to make studying abroad accessible and straightforward.
 
